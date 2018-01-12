@@ -1,0 +1,53 @@
+- Para unirse a una SALA creada por otro miembro el usuario debe:
+    - Estar registrado 
+    - Tener la dirección URL de la SALA || Saber el nombre y Contraseña de la Sala que busca.
+
+- Para unirse a una SALA:
+    - Estar registrado
+
+- Sobre las Fichas:
+    - Hay 4 Colores diferentes. (No especificados aún)
+    - La numeración es secuencial del 1 hasta el 13.
+    - Existen 2 juegos de cada Color.
+    - Hay 2 fichas de tipo Comodín.
+
+- Reglas para Sucesiones o Conjuntos:
+    - Sucesiones:
+        - Las Sucesiones deben contener almenos 3 fichas.
+        - Las Sucesiones son y deben ser del mismo color con una secuencia numerica de Mayor a Menor.
+        - Las Sucesiones deben contener como Maximo 13 fichas. 
+    - Conjuntos:
+        - Los conjuntos deben contener almenos 3 fichas.
+        - Los conjuntos deben ser del mismo numero.
+        - Los conjuntos NO pueden repetir colores.
+        - Los conjuntos pueden contener un Maximo de 4 fichas. 
+    - Ficha Especial:
+        - La ficha especial funciona como un comodín.
+        - Puede ser utilizada para completar Sueciones o Conjuntos.
+
+- Dentro del Juego:
+    - El juego comienza cuando almenos haya 3 pesonas en la SALA actual. Sala.Start if (Usuarios >= 3 && Usuarios <= 5)
+    - Cada jugador comienza con la cantidad de 14 Fichas asignadas aleatoriamente
+    - Se necesitan juntar 30 puntos para comenzar a jugar. 
+        - Los 30 puntos deben conseguirse en el mismo turno.
+        - Pueden ser juntados por Sucesiones y/o Conjuntos.
+        - No hay limite de fichas al bajar. 
+        - Respetar las reglas de Sucesiones o Conjuntos.
+    - Si no se pueden bajar los 30 puntos:
+        - Se toma una ficha de las Restantes. 
+    - Una vez que se consiguen los 30 Puntos:
+        - No pueden hacer otro movimiento hasta el siguiente Turno. 
+    - Sobre los Turnos:
+        - Se tiene un Maximo de 45 Seg para hacer el movimiento o Robar una ficha.
+        - Pasados los 45 seg si no se hizo un movimiento se otorga una ficha aleatoria. 
+        - Sobre los Movimientos:
+            - El jugador debe bajar almenos 1 ficha.
+            - Puede disponer de las fichas que ya se encuentran en Juego.
+        - Por turno sólo puede Bajar fichas o Comer. (NO AMBAS)
+        - Uso de la Ficha Especial:
+            - Si una ficha especial ya se encuentra en juego el usuario debe:
+                - Reponer la ficha que el comodín Ocupa. (Sí el Comodín funciona como 10N debe colocarse un 10N en su lugar)
+                    - El comodín queda libre de función y se puede utilizar para asignarle otra funcionalidad.
+                - Se puede tomar el comodín respetando su función. (Si es un 2R se mantiene así)
+- Fin del Juego:
+    - El juego termina cuando un jugador termina con sus fichas (Fichas == 0).
